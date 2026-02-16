@@ -11,6 +11,10 @@ services:
     networks:
        - abdulrehman
 
+networks:
+  abdulrehman:
+    driver: bridge
+
     
     
   #nginx:
