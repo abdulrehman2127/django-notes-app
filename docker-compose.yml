@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container-name: notes-app
+    container_name: notes-app
     ports:
       - "8000:8000"
     network:
