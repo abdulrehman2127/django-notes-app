@@ -13,7 +13,7 @@ services:
 
 networks:
   abdulrehman:
-    driver: bridge
+    external: true
 
     
     
