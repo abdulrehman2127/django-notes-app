@@ -19,6 +19,8 @@ COPY .env .env
 
 
 EXPOSE 8000
-CMD python /app/backend/manage.py migrate
-CMD python /app/backend/manage.py makemigrations
-CMD python /app/backend/manage.py runserver 0.0.0.0:8000
+CMD sh -c "\
+    python /app/backend/manage.py makemigrations && \
+    python /app/backend/manage.py migrate && \
+    python /app/backend/manage.py runserver 0.0.0.0:8000 \
+"
